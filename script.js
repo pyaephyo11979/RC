@@ -48,11 +48,13 @@ cattoggle.forEach((cat)=>{
     cat.addEventListener('click',()=>{
         let category=cat.textContent;
         let books=document.querySelectorAll('.book');
+        cat.parentNode.parentNode.childNodes[1].textContent=category;
         books.forEach((book)=>{
             if(book.classList.contains(category)){
                 book.style.display="block";
             }else if(category==="All"){
                 book.style.display="block";
+                cat.parentNode.parentNode.childNodes[1].textContent="All Categories";
             }
             else{
                 book.style.display="none";
@@ -65,6 +67,7 @@ tags.forEach((tg)=>{
     tg.addEventListener('click',()=>{
         let tag=tg.textContent;
         let books=document.querySelectorAll('.book');
+        tg.parentNode.parentNode.childNodes[1].textContent=tag;
         books.forEach((book)=>{
             console.log(book.classList)
             if(book.classList.contains(tag)){
@@ -85,6 +88,7 @@ tags.forEach((tg)=>{
                 }
             }else if(tag==="All"){
                 book.style.display="block";
+                tg.parentNode.parentNode.childNodes[1].textContent="All Tags";
             }
             else{
                 book.style.display="none";
