@@ -49,6 +49,7 @@ cattoggle.forEach((cat)=>{
         let category=cat.textContent;
         let books=document.querySelectorAll('.book');
         cat.parentNode.parentNode.childNodes[1].textContent=category;
+        tags.forEach((tg)=>{ tg.parentNode.parentNode.childNodes[1].textContent="Tags";})
         books.forEach((book)=>{
             if(book.classList.contains(category)){
                 book.style.display="block";
@@ -68,6 +69,9 @@ tags.forEach((tg)=>{
         let tag=tg.textContent;
         let books=document.querySelectorAll('.book');
         tg.parentNode.parentNode.childNodes[1].textContent=tag;
+        cattoggle.forEach((cat)=>{
+            cat.parentNode.parentNode.childNodes[1].textContent="Categories";
+        })
         books.forEach((book)=>{
             console.log(book.classList)
             if(book.classList.contains(tag)){
