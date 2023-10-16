@@ -10,6 +10,52 @@
     <title>Readers'Choice</title>
 </head>
 <body>
+    <div class="offcanvas offcanvas-start" id="contact">
+        <div class="offcanvas-header">
+            <h4>Contact Developer</h4>
+            <a data-bs-dismiss="offcanvas" class="btn btn-close"></a>
+        </div>
+        <div class="offcanvas-body">
+            <table class="table">
+                <tr>
+                    <th>Email <i class="fas fa-envelope-open"></i></th>
+                    <td><a target="_blank" class="text-decoration-none text-black " href="mailto:www.pyaephyoehlaing16@gmail.com">www.pyaephoehlaing16@gmail.com</a></td>
+                </tr>
+                <tr>
+                    <th>Instagram <i class="fab fa-instagram"></i></th>
+                    <td><a target="_blank" class="text-decoration-none text-black " href="https://www.instagram.com/pyae_p_h/">@pyae_p_h</a></td>
+                </tr>
+                <tr>
+                    <th>Facebook <i class="fab fa-facebook"></i></th>
+                    <td><a target="_blank" class="text-decoration-none text-black " href="https://web.facebook.com/pyaephyo.hlaing.007">Pyare Phyoe Hlaing</a></td>
+                </tr>
+                <tr>
+                    <th>Github <i class="fab fa-github"></i></th>
+                    <td><a target="_blank" class="text-decoration-none text-black " href="https://github.com/pyaephyo11979">pyaephyo11979</a></td>
+                </tr>
+                <tr>
+                    <th>Linkedin <i class="fab fa-linkedin"></i></th>
+                    <td><a target="_blank" class="text-decoration-none text-black " href="https://www.linkedin.com/in/pyae-phyo-hlaing-66b0961aa/">Pyae Phyo Hlaing</a></td>
+                </tr>
+                <tr>
+                    <th>Website <i class="fas fa-link"></i></th>
+                    <td><a href="https://pyaephyo.me" class="text-decoration-none text-black">pyaephyo.me</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-start" id="aboutUs">
+        <div class="offcanvas-header">
+            <h4>About Us</h4>
+            <a data-bs-dismiss="offcanvas" class="btn btn-close">
+            </a>
+        </div>
+        <div class="offcanvas-body">
+            <p class="fs-4">This Project is developed by me (Drake) based on the book api developed by one of my friends, Luke <br>
+                <span class="display-6 text-warning-emphasis">Thanks for your visiting !</span>
+            </p>
+        </div>
+    </div>
     <header class="container-fluid sticky-top">
         <div class="navbar  navbar-expand-xl  " style="background-color: whitesmoke;">
             <div class="navbar-brand"><a href="" class="text-decoration-none"><h3 class=" ">Readers'<span>Choice</span></h3></a></div>
@@ -19,8 +65,8 @@
             <div class="collapse navbar-collapse d-xl-flex justify-content-end " id="colNav">
                 <div class="navbar-nav">
                     <div class="nav-item"><a href="" class="nav-link">Home</a></div>
-                    <div class="nav-item"><a href=""  class="nav-link">About</a></div>
-                    <div class="nav-item"><a href="" class="nav-link">Contact</a></div>
+                    <div class="nav-item"><a style="cursor: pointer;" data-bs-toggle="offcanvas" data-bs-target="#aboutUs"  class="nav-link">AboutUs</a></div>
+                    <div class="nav-item"><a style="cursor: pointer;" data-bs-toggle="offcanvas" data-bs-target="#contact" class="nav-link">Contact</a></div>
                     <div class="nav-item">
                         <div class="dropdown">
                             <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" style="font-family: Georgia, 'Times New Roman', Times, serif; color:black;">Categories</button>
