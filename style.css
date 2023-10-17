@@ -16,6 +16,9 @@ background-color: whitesmoke;
 .navbar-brand>a>h3>span{
     color:red;
 }
+.navbar{
+    background: linear-gradient(92deg,wheat,whitesmoke);
+}
 #bookDisplay{
     left:0;
 }
