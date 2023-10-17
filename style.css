@@ -17,7 +17,7 @@ background-color: whitesmoke;
     color:red;
 }
 .navbar{
-    background: linear-gradient(82deg,wheat,whitesmoke);
+    background: whitesmoke;
 }
 #bookDisplay{
     left:0;
