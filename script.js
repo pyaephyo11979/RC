@@ -10,7 +10,11 @@ fetch("https://booklibraryapi.onrender.com/Book").then(res=>res.json())
         <img src="${book.image}" class="card-img img-fluid " style="width:200px;" alt="...">
           <h5  class="bookName card-title">${book.name}</h5>
           <p class="authorName">${book.author.name}</p>
-          <a href="${book.pdf_url}" target="_blank" class="btn" style="background-color:wheat;">Read Now <i class="fas fa-book-open"></i></a>`
+          <a href="${book.pdf_url}" target="_blank" class="btn" style="background-color:wheat;">Read Now <i class="fas fa-book-open"></i></a>
+          <button class="btn bookMarkAdd" type="button" style="background-color:wheat;" >Add to Bookmark <i class="fas fa-bookmark"></i></button>
+          </div>
+          </div>
+          `
     })
 })
 //Search
@@ -116,3 +120,15 @@ tags.forEach((tg)=>{
         })
     })
 })
+let Bookmark=document.getElementById('bookmarkDisplay');
+let container = document.getElementById('container');
+display.addEventListener('click', function(event) {
+  if (event.target.classList.contains('bookMarkAdd')) {
+    let ba = event.target;
+    let book = ba.parentNode.parentNode;
+    let bcopy=book.cloneNode(true);
+    // Rest of your code to handle the event
+    // ...
+    Bookmark.innerHTML+=`<tr><td>${bcopy.innerHTML}</td></tr>`
+  }
+});
