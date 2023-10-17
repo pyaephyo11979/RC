@@ -9,7 +9,7 @@ fetch("https://booklibraryapi.onrender.com/Book").then(res=>res.json())
         <div class="card-body">
         <img src="${book.image}" class="card-img img-fluid " style="width:200px;" alt="...">
           <h5  class="bookName card-title">${book.name}</h5>
-          <p>${book.author.name}</p>
+          <p class="authorName">${book.author.name}</p>
           <a href="${book.pdf_url}" target="_blank" class="btn" style="background-color:wheat;">Read Now <i class="fas fa-book-open"></i></a>`
     })
 })
@@ -28,11 +28,11 @@ sitem.addEventListener('keyup',(e)=>{
         }
     })
 })
-let sbtn=document.querySelector('#searchBtn');
-sbtn.addEventListener('click',()=>{
+function search(){
     let text=sitem.value;
     let sinput=text.toLowerCase();
     let name=document.querySelectorAll('.bookName');
+    let authorName=document.querySelectorAll('.authorName');
     name.forEach((n)=>{
         let searchGiven=n.textContent.toLowerCase();
         if(searchGiven.includes(sinput)){
@@ -43,6 +43,19 @@ sbtn.addEventListener('click',()=>{
         }
         console.log(searchGiven.includes(sinput));
     })
+    authorName.forEach((n)=>{
+        let searchGiven=n.textContent.toLowerCase();
+        if(searchGiven.includes(sinput)){
+            n.parentElement.parentElement.style.display="block";
+        }
+        else{
+            n.parentElement.parentElement.style.display="none";
+        }
+    })
+}
+let sbtn=document.querySelector('#searchBtn');
+sbtn.addEventListener('click',()=>{
+search();
 })
 //Choose Category
 let cattoggle=document.querySelectorAll('.cate');
