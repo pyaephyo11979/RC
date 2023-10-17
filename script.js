@@ -127,8 +127,6 @@ display.addEventListener('click', function(event) {
     let ba = event.target;
     let book = ba.parentNode.parentNode;
     let bcopy=book.cloneNode(true);
-    // Rest of your code to handle the event
-    // ...
     Bookmark.innerHTML+=`<tr><td>${bcopy.innerHTML}</td></tr>`
   }
 });
