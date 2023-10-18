@@ -27,7 +27,7 @@ homeBtn.addEventListener('click',()=>{
     tags.forEach((tg)=>{ tg.parentNode.parentNode.childNodes[1].textContent="Tags";})
 })
 //Search
-sitem.addEventListener('keyup',(e)=>{
+sitem.addEventListener('keydown',(e)=>{
     let text=e.target.value;
     let sinput=text.toLowerCase();
     let name=document.querySelectorAll('.bookName');
@@ -40,6 +40,9 @@ sitem.addEventListener('keyup',(e)=>{
             n.parentElement.parentElement.style.display="none";
         }
     })
+    if(e.key==="Enter"){
+        search();
+    }
 })
 function search(){
     let text=sitem.value;
