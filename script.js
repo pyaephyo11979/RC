@@ -149,7 +149,6 @@ display.addEventListener('click', function(event) {
     <td><a href="${href}" target="_blank" class="btn btn-info">Read Now <i class="fas fa-book-open"></i></a></td>
     </tr>
     `
-    let bcopy=book.cloneNode(true);
     Bookmark.innerHTML+=bmk;
   }
 });
