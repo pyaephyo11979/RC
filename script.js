@@ -1,5 +1,6 @@
 let display=document.querySelector("#booksDisplay");
 let sitem=document.querySelector('#searchedInput');
+let homeBtn=document.querySelector('#home');
 fetch("https://booklibraryapi.onrender.com/Book").then(res=>res.json())
 .then((data)=>{
     let Books=[];
@@ -16,6 +17,14 @@ fetch("https://booklibraryapi.onrender.com/Book").then(res=>res.json())
           </div>
           `
     })
+})
+homeBtn.addEventListener('click',()=>{
+    let books=document.querySelectorAll('.book');
+    books.forEach((book)=>{
+        book.style.display="block";
+    })
+    cattoggle.forEach((cat)=>{ cat.parentNode.parentNode.childNodes[1].textContent="Categories";})
+    tags.forEach((tg)=>{ tg.parentNode.parentNode.childNodes[1].textContent="Tags";})
 })
 //Search
 sitem.addEventListener('keyup',(e)=>{
