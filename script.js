@@ -155,3 +155,15 @@ display.addEventListener('click', function(event) {
     Bookmark.innerHTML+=bmk;
   }
 });
+let loadingIndicator=document.getElementById("loading");
+document.onreadystatechange=()=>{
+   if(document.readyState !== "complete"){
+    document.querySelector('body').style.visibility="hidden";
+    loadingIndicator.style.visibility="visible";
+   }else{
+    setTimeout(()=>{
+        document.querySelector('body').style.visibility="visible"
+        loadingIndicator.style.display="none";
+    },3000)
+   }
+}
