@@ -1,6 +1,7 @@
 let display=document.querySelector("#booksDisplay");
 let sitem=document.querySelector('#searchedInput');
 let homeBtn=document.querySelector('#home');
+//Fetching Books
 fetch("https://booklibraryapi.onrender.com/Book").then(res=>res.json())
 .then((data)=>{
     let Books=[];
